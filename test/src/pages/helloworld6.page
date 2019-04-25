@@ -1,0 +1,13 @@
+<apex:page standardController="opportunity" showHeader="false" sidebar="false" recordSetVar="opportunity"  >
+<apex:form ><!--  <c:test_test record="Contact" /> -->
+<apex:pageBlock title="Hello ,{!$User.FirstName}">
+<apex:pageBlockTable value="{!opportunity}" var="a">
+<apex:column value="{!a.name}"/>
+<apex:column headerValue="Private?">
+<apex:inputCheckbox value="{!a.isprivate}" label="ty"/>
+</apex:column>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+
+</apex:page>

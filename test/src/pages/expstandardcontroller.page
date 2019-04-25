@@ -1,0 +1,55 @@
+<apex:page standardController="Account" showHeader="false" sidebar="false" extensions="e2">
+ <apex:pageBlock title="display account details">
+<apex:tabPanel switchType="ajax">
+ <apex:tab label="details" labelWidth="200">
+   <apex:detail relatedList="false"/>
+</apex:tab>
+
+  <apex:tab label="details" labelWidth="200">
+   <apex:relatedList list="Contacts"/>
+</apex:tab>
+    
+    
+  <apex:tab label="details" labelWidth="200">
+   <apex:relatedList list="opportunities"/>
+</apex:tab>
+    
+   <apex:tab label="details" labelWidth="200">
+   <apex:relatedList list="cases"/>
+</apex:tab>
+     
+        <apex:tab label="details" labelWidth="200">
+<apex:pageBlockTable value="{!camps}" var="c">
+   <apex:column value="{!c.Name}"/>
+            
+       </apex:pageBlockTable>
+    </apex:tab>
+     
+ </apex:tabPanel>
+ </apex:pageBlock>
+</apex:page>
+
+
+
+
+
+
+
+
+
+
+<!--Xml format-->
+
+
+
+
+
+
+
+ <!--<apex:pageBlockSection collapsible="false" columns="1" >
+ <apex:inputField value="{!Account.name}"/>
+ <apex:detail relatedList="false"/>
+ <apex:relatedList list="Contacts"/>
+  <apex:relatedList list="opportunities"/>
+  <apex:relatedList list="Cases"/>
+ </apex:pageBlockSection>-->

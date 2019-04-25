@@ -1,0 +1,26 @@
+<apex:page standardController="Account" showHeader="false" sidebar="false"  >
+<apex:form ><!--  <c:test_test record="Contact" /> -->
+<apex:pageBlock title="Hello ,{!$User.FirstName}">
+
+
+<apex:pageBlockSection columns="1">
+        You are viewing the {!account.name} account.
+      <apex:inputField value="{!Account.name}"/>
+     
+      <apex:inputField value="{!account.industry}"/>
+      <apex:inputHidden value="{!account.name}" required="true"/>
+      <apex:inputText title="test" tabindex="5" value="{!account.industry}" />
+      <apex:inputTextarea label="ty"/>
+      <apex:inputTextarea rows="5" cols="50"/>
+      <apex:outputLabel for="test1" value="label">
+      <apex:inputText id="test1"/>
+      </apex:outputLabel>
+      <apex:inputsecret title="test1"/>
+     
+     
+  </apex:pageBlockSection>     
+</apex:pageBlock>
+<!--     <apex:detail subject="{!account.ownerId}" relatedList="false" title="false"/>  -->
+</apex:form>
+
+</apex:page>

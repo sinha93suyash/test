@@ -1,0 +1,12 @@
+<apex:page standardController="Account" recordSetVar="items" >
+  <apex:pageBlock title="Page Block">
+   <apex:pageBlockTable value="{!items}" var="a" captionStyle="color:pink;">
+    <apex:facet name="Caption">Account Details</apex:facet>
+      <apex:facet name="header">Account Details header</apex:facet>
+       <apex:facet name="footer">Account Details footer</apex:facet>
+   <apex:column value="{!a.name}"/>
+   <apex:column value="{!a.Industry}"/>
+   <apex:column value="{!a.phone}"/>
+    </apex:pageBlockTable>
+ </apex:pageBlock>
+</apex:page>

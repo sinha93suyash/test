@@ -1,0 +1,51 @@
+<apex:page standardController="Account" recordSetVar="acts">
+    <apex:form >
+    <!--form componenet is used when button is used -->
+ <apex:pageBlock title="show account">
+<c:test_test record="Account" />
+   <apex:commandButton value="Previous" action="{!Previous}"/>
+  <apex:pageBlockTable value="{!acts}" var="a">
+   <apex:column value="{!a.Name}"/>
+    <apex:column value="{!a.Industry}"/>
+      <apex:column value="{!a.Type}"/>
+     <apex:column >
+      <apex:inputField value="{!a.Type}"/>
+      </apex:column>
+ </apex:pageBlockTable>    
+
+ </apex:pageBlock>
+  <apex:commandButton value="save it" action="{!Quicksave}"/>
+  <apex:commandLink value="save it" action="{!save}"/>
+   <apex:commandButton value="Next page" action="{!Next}"/>
+    
+   <!--Save action saves the record and bring on the standard object page it is for while quick save do not navigate anywhere it is on the same page-->
+    <apex:inlineEditSupport /><!--inline edit we can perform while double clicking the data-->
+ </apex:form>
+</apex:page>
+
+
+<!--for standard controller we do not define the action it is already there,some of them are listed below
+Save
+Quicksave
+Edit
+Delete 
+Cancle
+List
+
+Standard list controller have some other action other 
+Next
+Previous
+First
+Last
+Standard list controller shows only 20 records we will have to use pagination
+
+Override a standard page with visualforce page
+
+
+
+
+
+
+
+
+-->

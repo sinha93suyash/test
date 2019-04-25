@@ -1,0 +1,5 @@
+<apex:page standardController="Battle_Station__c">
+
+    <apex:relatedList list="Resources1__r" />
+
+</apex:page>
