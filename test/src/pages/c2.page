@@ -4,7 +4,7 @@
       <apex:pageBlockTable value="{!Accts1}" var="a">
           <apex:column value="{!a.name}"/>
           <apex:column value="{!a.industry}"/>
-      moved1test
+      moved1test1
       
       </apex:pageBlockTable>
       <apex:pageBlockButtons >
