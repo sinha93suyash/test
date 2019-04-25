@@ -1,0 +1,17 @@
+<apex:page controller="c1" >
+    <apex:form >
+  <apex:pageBlock title="List of details">
+      <apex:pageBlockTable value="{!Accts1}" var="a">
+          <apex:column value="{!a.name}"/>
+          <apex:column value="{!a.industry}"/>
+      move
+      
+      </apex:pageBlockTable>
+      <apex:pageBlockButtons >
+      <apex:commandButton value="Click" action="{!Click}"/>
+      </apex:pageBlockButtons>
+    
+    
+    </apex:pageBlock>
+        </apex:form>
+</apex:page>
