@@ -2,6 +2,7 @@
     <aura:attribute name="accounts" type="Account[]"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     <ul>
+    test
     <aura:iteration items="{!v.accounts}" var="account">
         <c:AccountListItem account="{!account}"/>
     </aura:iteration>
