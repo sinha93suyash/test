@@ -1,4 +1,5 @@
-public with sharing class AccountController {
+public with sharing class AccountController {vvv
+    
     @AuraEnabled
     public static List<Account> findAll() {
     return [SELECT id, name, Location__Latitude__s, Location__Longitude__s
